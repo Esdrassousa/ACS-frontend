@@ -13,7 +13,7 @@ export default function Register() {
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [senha, setSenha] = useState('');
 
     const history = useHistory();
 
@@ -24,7 +24,7 @@ export default function Register() {
         const data = {
             nome,
             email,
-            password,
+            senha,
         };
         
 
@@ -75,8 +75,8 @@ export default function Register() {
 
                     <input
                         placeholder="senha"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
+                        value={senha}
+                        onChange={e => setSenha(e.target.value)}
                     />
 
                     <button className="button" type="submit">Cadastrar</button>
