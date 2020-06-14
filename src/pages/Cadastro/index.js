@@ -59,7 +59,7 @@ export default function Cadastro() {
                     <p>{cadastros.idade}</p>
                 </li>
             )));
-            //setClick(<a href= 'membro/new' className="button" >Cadastrar Novo Membro</a>)
+            setClick(<a href= 'membro/new' className="button" >Cadastrar Novo Membro</a>)
 
 
 
