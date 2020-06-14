@@ -27,6 +27,8 @@ export default function Logon(){
     try{
 
       const response = await api.post('user/authentication' , data)
+      localStorage.setItem('token', response.data.token)
+       
       alert('encontrado')
       
       
