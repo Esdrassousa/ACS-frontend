@@ -28,8 +28,7 @@ export default function Logon(){
       const response = await api.post('user/authentication' , data)
       alert('encontrado')
       
-      await api.post('familia/id', { id })
-
+      
       history.push('/cadastro')
 
 

@@ -17,7 +17,7 @@ export default function Cadastro() {
     const [cadastro, setCadastro] = useState([]);
     const [id, setId] = useState('');
 
-    await api.post('familia/id', { id })
+    
     
 
     //fu.a(id)
