@@ -50,7 +50,7 @@ export default function Logon(){
           <form onSubmit={handleLogon}>
             <h1>Entre no Sistema</h1>
 
-            <input className = "email" placeholder = "nome" 
+            <input className = "email" placeholder = "email" 
             value ={email} onChange={e=>setEmail(e.target.value)}>
 
             </input>
