@@ -26,7 +26,7 @@ export default function Cadastro() {
 
         try {
 
-            await api.post('familia/id', { id })
+            await api.post('familia/id', {id} )
 
             localStorage.setItem('familyId', id)
 
@@ -41,6 +41,7 @@ export default function Cadastro() {
                     setCadastro(response.data)
 
                 })
+                
  
 
 
@@ -64,8 +65,12 @@ export default function Cadastro() {
 
 
         } catch (e) {
-
-            alert('erro')
+            if(e.status =404)
+            return alert('na');
+            if(e.status =400)
+            return alert(e);
+            
+            
 
         }
 
@@ -76,7 +81,7 @@ export default function Cadastro() {
 
     
 
-     useEffect(async function fet() {
+     /* useEffect(async function fet() {
         await api.get('familia/buscar',
             {
                 headers: {
@@ -85,7 +90,7 @@ export default function Cadastro() {
             }).then(response => {
                 setCadastro(response.data)
             })
-    }, []) 
+    }, [Buscar])  */
 
     useEffect(() => {
         setCad((cadastro.map(cadastros => (
@@ -121,14 +126,14 @@ export default function Cadastro() {
                 <p>{cadastros.idade}</p>
             </li>
         )))
-    }, [Buscar])
+    }, [])
     
     return (
 
         <div className='Cadastre'>
             <header>
 
-                <form onSubmit={Buscar} >
+                <form onSubmit = {Buscar} >
                     <span>Buscar família</span>
 
                     <input
@@ -146,7 +151,7 @@ export default function Cadastro() {
                 
                 
                 <a href='familia'>
-                    <FiLogIn size={25} color="#e02041" /> Cadastrar nova Família
+                    <FiLogIn size={25} color="#e02041"/> Cadastrar nova Família
                 </a>
 
                 
@@ -158,8 +163,8 @@ export default function Cadastro() {
             </ul>
 
             
+            
             {clik}
-
 
         </div>
     )

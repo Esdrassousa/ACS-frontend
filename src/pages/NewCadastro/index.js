@@ -14,6 +14,7 @@ async function sub(e){
     e.preventDefault()
 
     const familyId = localStorage.getItem('familyId')
+    const token = localStorage.getItem('token')
                
 
     const data = { 
@@ -26,8 +27,11 @@ async function sub(e){
     }
     try{
 
-        await  api.post('cadastro' , data , {headers:{
-            Authorization:familyId
+        await  api.post('cadastro' , data , {
+            headers:{    
+            Authorization:familyId,
+            access :token
+
         }})
         alert('cadastrado')
 

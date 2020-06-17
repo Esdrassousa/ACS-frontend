@@ -14,16 +14,24 @@ export default function New_Family() {
 
     async function sub(e) {
         e.preventDefault()
+        
+        const ACS_id = localStorage.getItem('ACS_id')
+        const token = localStorage.getItem('token')
 
         const data = {
             id,
-            numero
+            numero,
 
         }
 
         try {
 
-           const response =  await api.post('familia', data)
+           const response =  await api.post('familia', data , {
+            headers: {
+                Authorization: ACS_id,
+                access : token
+            }
+        })
             alert('cadastrado')
 
         } catch (e) {

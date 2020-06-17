@@ -38,18 +38,7 @@ export default function Register() {
         }catch(e){
             alert(data.message)
         }
-        ///const obj = JSON.parse(data)  
-        /*    
-        try {
-            const response = await api.post('customers', data);
-            ///sconsole.log(response)
-
-
-            alert(`cadastrado`)
-        } catch (err) {
-            alert(`erro ao tentar se cadastrar`)
-
-        }*/
+        
     }
 
     return (
