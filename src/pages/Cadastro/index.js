@@ -81,7 +81,7 @@ export default function Cadastro() {
 
     
 
-     /* useEffect(async function fet() {
+      useEffect(async function fet() {
         await api.get('familia/buscar',
             {
                 headers: {
@@ -90,7 +90,7 @@ export default function Cadastro() {
             }).then(response => {
                 setCadastro(response.data)
             })
-    }, [Buscar])  */
+    }, [Buscar]) 
 
     useEffect(() => {
         setCad((cadastro.map(cadastros => (
@@ -126,7 +126,7 @@ export default function Cadastro() {
                 <p>{cadastros.idade}</p>
             </li>
         )))
-    }, [])
+    }, [Buscar])
     
     return (
 
