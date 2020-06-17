@@ -45,12 +45,13 @@
     margin-top: 30px;
     color: #41414d;
     font-size: 18px;
-    margin: 20px  200px 0 200px ;
+    margin: 20px  200px 0 10px ;
     font-weight: 500;
     transition: opacity 0.2s;
 }
 
 .logon-container section.form form a svg{
+    margin-left: 20px;
     margin-right: 8px;
 }
 
