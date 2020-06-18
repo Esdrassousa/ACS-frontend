@@ -92,7 +92,7 @@ export default function Cadastro() {
             })
     }, [familyId])  
 
-    useEffect(() => {
+    /* useEffect(() => {
         setCad((cadastro.map(cadastros => (
             <li key={cadastros.id}>
                 <strong>Nome:</strong>
@@ -108,7 +108,7 @@ export default function Cadastro() {
                 <p>{cadastros.idade}</p>
             </li>
         ))))
-    }, [familyId])
+    }, [familyId]) */
 
     useEffect(() =>{
         (cadastro.map(cadastros => (
