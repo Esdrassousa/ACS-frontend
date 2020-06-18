@@ -86,7 +86,7 @@ export default function Cadastro() {
             }).then(response => {
                 setCadastro(response.data)
             })
-    }, [familyId])   
+    }, [() => Buscar])
 
     /* useEffect(() => {
         setCad((cadastro.map(cadastros => (
