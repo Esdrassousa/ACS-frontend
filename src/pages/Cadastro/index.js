@@ -75,21 +75,9 @@ export default function Cadastro() {
     
     const familyId =  localStorage.getItem('familyId')
 
-    
 
-        /* useEffect(async function fet() {
-        await api.get('familia/buscar',
-            {
-                headers: {
-                    Authorization: familyId
-                }
-            }).then(response => {
-                setCadastro(response.data)
-            })
-    }, [Buscar]) */
-
-     useEffect(() => {
-        setCad((cadastro.map(cadastros => (
+      useEffect(async () => {
+       await setCad((cadastro.map(cadastros => (
             <li key={cadastros.id}>
                 <strong>Nome:</strong>
                 <p>{cadastros.nome}</p>
@@ -104,26 +92,7 @@ export default function Cadastro() {
                 <p>{cadastros.idade}</p>
             </li>
         ))))
-    }, [familyId]) 
-
-
-    /* useEffect(() =>{
-        (cadastro.map(cadastros => (
-            <li key={cadastros.id}>
-                <strong>Nome:</strong>
-                <p>{cadastros.nome}</p>
-
-                <strong>CPF</strong>
-                <p>{cadastros.cpf}</p>
-
-                <strong>Parentesco</strong>
-                <p>{cadastros.parentesco}</p>
-
-                <strong>Idade</strong>
-                <p>{cadastros.idade}</p>
-            </li>
-        )))
-    }, [familyId]) */
+    }, [familyId])  
     
     return (
 
@@ -158,11 +127,7 @@ export default function Cadastro() {
             <ul>
                 {cad}
             </ul>
-
-            
-            
             {clik}
-
         </div>
     )
 }
