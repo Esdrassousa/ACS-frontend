@@ -45,7 +45,7 @@ export default function Cadastro() {
  
 
 
-            setCad(cadastro.map(cadastros => (
+            await setCad(cadastro.map(cadastros => (
                 <li key={cadastros.id}>
                     <strong>Nome:</strong>
                     <p>{cadastros.nome}</p>
